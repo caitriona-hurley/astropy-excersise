@@ -1,0 +1,20 @@
+#this is just a simple astropy excersise where you use the Quanitity class
+#to help find how fast the earth moves around the sun.
+
+import astropy.units as u
+
+import astropy.constants
+
+import math
+import numpy as np
+
+from astropy.constants import M_sun, au, G
+
+v = np.sqrt((G*M_sun)/au)
+# i got that equation from the astropy site, i did not come up with that
+print(v)
+
+v = 29788.833564362874 * u.m/u.s
+
+v.to(u.km/u.s)
+
